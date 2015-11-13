@@ -1,0 +1,369 @@
+<!DOCTYPE html> 
+<html lang="cat">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <title>Curs BCN Activa. Part 1. JQuery Mobile</title>
+
+    <link href="jquery-mobile/jquery.mobile.structure-1.3.0.min.css" rel="stylesheet" type="text/css"/>
+    <link href="jquery-mobile/app_JQM.min.css" rel="stylesheet" type="text/css">
+    <link href="css/customJQM.css" rel="stylesheet" type="text/css">
+
+    <script src="jquery-mobile/jquery-1.8.3.min.js" type="text/javascript"></script>
+    <script src="js/main.js" type="text/javascript"></script>
+    <script src="jquery-mobile/jquery.mobile-1.3.0.min.js" type="text/javascript"></script>
+</head> 
+<body>
+ 
+<div data-role="page" id="page" data-theme="b">
+	<div data-role="header">
+		<h1>jQuery Mobile</h1>
+	</div>
+	<div data-role="content">
+	     <section class="logo">
+            <img src="img/logo_cast.png" alt="">
+            <hr>
+        </section>
+        <div >
+            <p class="resum">En aquest apartat veurem diferents formes d'organitzar continguts amb JQuery Mobile, com fer llistes, usar botons i enllaços i construir formularis...</p>
+        </div>
+		<ul data-role="listview"  data-theme="b">
+			<li><a href="#contents">Continguts</a></li>
+            <li><a href="#lists">Llistes</a></li>
+            <li><a href="#forms">Formulari</a></li>      
+		</ul>
+	</div>
+	<div data-role="footer" data-position="fixed" data-id="footer_main">
+		<div data-role="navbar">
+        	<ul>
+                <li><a href="#" data-rel="back" data-icon="back" data-role="button">Back</a></li>
+                <li><a href="#" data-icon="home" data-role="button" rel="external">Home</a></li>
+                <li><a href="#dialegs" data-icon="info" data-rel="dialog" data-role="button">Info</a></li>
+                <li><a href="envioOK.html" data-icon="arrow-r" data-role="button" rel="external">Next</a></li>
+            </ul>
+        </div>       
+	</div>
+</div> <!-- ****  END ID PAGE  **** -->
+
+
+<div data-role="page" id="contents">
+	<div data-role="header">
+		<h1>Continguts</h1>
+		<a href="#" data-role="button" data-icon="back" data-rel="back" data-iconpos="notext"></a>
+		<a href="#forms" data-role="button" data-icon="arrow-r" data-iconpos="notext"></a>
+	</div>
+	<div data-role="content">	
+		<ul data-role="listview">
+		    <li><a href="#botons" data-transition="pop">Botons</a></li>
+		    <li><a href="#dialegs" data-rel="dialog">Diàlegs</a></li>
+		    <li><a href="#colapsables">Cont. Col·lapsable</a></li>
+		    <li><a href="#acordions">Acordions</a></li>
+		    <li><a href="#grid">Columnes</a></li>
+	  </ul>	
+	</div>
+	<div data-role="footer" data-position="fixed" data-id="footer_main">
+		<div data-role="navbar">
+        	<ul>
+                <li><a href="#" data-rel="back" data-icon="back" data-role="button">Back</a></li>
+                <li><a href="#" data-icon="home" data-role="button" rel="external">Home</a></li>
+                <li><a href="#dialegs" data-icon="info" data-rel="dialog" data-role="button">Info</a></li>
+                <li><a href="envioOK.html" data-icon="arrow-r" data-role="button" rel="external">Next</a></li>
+            </ul>
+        </div>  
+	</div>
+</div> <!-- ****  END ID CONTENTS  **** -->
+
+
+<div data-role="page" id="botons" class="avis">
+    <div data-role="header">
+        <h1>Botons</h1>
+        <a href="#" data-role="button" data-icon="back" data-rel="back" data-iconpos="notext"></a>
+    </div>
+    <div data-role="content">
+        <a href="https://build.phonegap.com" target="_blank"><input type="image" value="Imagen" src="img/phonegap.png" width="200"/></a> 
+        <div data-role="controlgroup" data-type="horizontal" class="mg2">
+            <a href="mailto:info@contanimacion.com" data-role="button">Mail</a>
+            <a href="tel:9823430005" data-role="button">Tel.</a>
+        </div>
+        <div data-role="controlgroup" data-type="horizontal">
+            <a href="#" data-role="button" data-icon="arrow-l" data-rel="back">Tornar</a>
+            <a href="index.html" data-role="button" data-icon="home"  data-iconpos="notext"></a>
+            <a href="#formularios" data-role="button"  data-icon="arrow-r" data-iconpos="right" data-transition="slidedown">Més...</a>
+        </div>
+    </div>
+    <div data-role="footer" data-position="fixed" data-id="footer_main">
+		<div data-role="navbar">
+        	<ul>
+                <li><a href="#" data-rel="back" data-icon="back" data-role="button">Back</a></li>
+                <li><a href="#" data-icon="home" data-role="button" rel="external">Home</a></li>
+                <li><a href="#dialegs" data-icon="info" data-rel="dialog" data-role="button">Info</a></li>
+                <li><a href="envioOK.html" data-icon="arrow-r" data-role="button" rel="external">Next</a></li>
+            </ul>
+        </div> 
+	</div>
+</div> <!-- ****  END ID BOTONS  **** -->
+
+
+<div data-role="page" id="dialegs">
+    <div data-role="header">
+        <h1>Diàleg</h1>
+    </div>
+    <div data-role="content">  
+        <div data-role="controlgroup" data-type="horizontal" class="dialog_test">
+            <a href="#contents" data-direction="reverse" data-role="button">Acceptar</a>
+            <a href="#contents" data-direction="reverse" data-role="button">Cancel·lar</a>
+        </div>
+    </div>
+</div> <!-- ****  END ID DIALEGS  **** -->
+
+
+<div data-role="page" id="colapsables">
+    <div data-role="header">
+        <h1>Col·lapsable</h1>
+        <a href="#" data-role="button" data-icon="back" data-rel="back" data-iconpos="notext"></a>
+    </div>
+    <div data-role="content" class="just">
+        <div data-role="collapsible">
+            <h2>Contenidor 1</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.erit dui quis, venenatis ut ac sem. Duis scelerisque tristique lobortis. Sed in euismod diam. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam et molestie magna. Maecenas tempor elementum dolor id volutpat.</p>
+        </div>
+        <div data-role="collapsible" data-collapsed="true">
+            <h2>Contenidor 2</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.erit dui quis, venenatis ut ac sem. Duis scelerisque tristique lobortis. Sed in euismod diam. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam et molestie magna. Maecenas tempor elementum dolor id volutpat.</p>
+        </div>
+    </div>     
+    <div data-role="footer" data-position="fixed" data-id="footer_main">
+		<div data-role="navbar">
+        	<ul>
+                <li><a href="#" data-rel="back" data-icon="back" data-role="button">Back</a></li>
+                <li><a href="#" data-icon="home" data-role="button" rel="external">Home</a></li>
+                <li><a href="#dialegs" data-icon="info" data-rel="dialog" data-role="button">Info</a></li>
+                <li><a href="envioOK.html" data-icon="arrow-r" data-role="button" rel="external">Next</a></li>
+            </ul>
+        </div> 
+	</div>
+</div> <!-- ****  END ID COLAPSABLES  **** -->
+
+
+<div data-role="page" id="acordions">
+    <div data-role="header">
+        <h1>Acordions</h1>
+        <a href="#" data-role="button" data-icon="back" data-rel="back" data-iconpos="notext"></a>
+    </div>
+     
+    <div data-role="content" class="just">
+        <div data-role="collapsible-set">
+            <div data-role="collapsible" data-collapsed="true">
+                <h3>Acordió 1</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.erit dui quis, venenatis ut ac sem. Duis scelerisque tristique lobortis. Sed in euismod diam. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam et molestie magna. Maecenas tempor elementum dolor id volutpat.</p>
+            </div>
+            <div data-role="collapsible" data-collapsed="false">
+                <h3>Acordió 2</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.erit dui quis, venenatis ut ac sem. Duis scelerisque tristique lobortis. Sed in euismod diam. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam et molestie magna. Maecenas tempor elementum dolor id volutpat.</p>
+            </div>
+            <div data-role="collapsible" data-collapsed="true">
+                <h3>Acordió 3</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.erit dui quis, venenatis ut ac sem. Duis scelerisque tristique lobortis. Sed in euismod diam. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam et molestie magna. Maecenas tempor elementum dolor id volutpat.</p>
+            </div>
+        </div>
+    </div>
+    <div data-role="footer" data-position="fixed" data-id="footer_main">
+		<div data-role="navbar">
+        	<ul>
+                <li><a href="#" data-rel="back" data-icon="back" data-role="button">Back</a></li>
+                <li><a href="#" data-icon="home" data-role="button" rel="external">Home</a></li>
+                <li><a href="#dialegs" data-icon="info" data-rel="dialog" data-role="button">Info</a></li>
+                <li><a href="envioOK.html" data-icon="arrow-r" data-role="button" rel="external">Next</a></li>
+            </ul>
+        </div> 
+	</div>
+</div> <!-- ****  END ID ACORDIONS  **** -->
+
+
+<div data-role="page" id="grid" data-theme="b">
+    <div data-role="header">
+        <h1>Grid</h1>
+        <a href="#" data-role="button" data-icon="back" data-rel="back" data-iconpos="notext"></a>
+    </div> 
+    <div data-role="content">
+        <div class="ui-grid-a">
+            <div class="ui-block-a"><button>Botó 1</button></div>
+            <div class="ui-block-b"><button>Botó 2</button></div>
+            <div class="ui-block-a"><button>Botó 3</button></div>
+            <div class="ui-block-b"><button>Botó 4</button></div>
+        </div> 
+    </div> 
+    <div data-role="footer" data-position="fixed" data-id="footer_main">
+		<div data-role="navbar">
+        	<ul>
+                <li><a href="#" data-rel="back" data-icon="back" data-role="button">Back</a></li>
+                <li><a href="#" data-icon="home" data-role="button" rel="external">Home</a></li>
+                <li><a href="#dialegs" data-icon="info" data-rel="dialog" data-role="button">Info</a></li>
+                <li><a href="envioOK.html" data-icon="arrow-r" data-role="button" rel="external">Next</a></li>
+            </ul>
+        </div> 
+	</div>
+</div> <!-- ****  END ID GRID  **** -->
+
+
+
+
+<div data-role="page" id="lists"  data-theme="b">
+	<div data-role="header">
+		<h1>Llistes</h1>
+        <a href="#" data-role="button" data-icon="back" data-rel="back" data-iconpos="notext"></a>
+	</div>
+	<div data-role="content">
+	    <div data-role="collapsible-set">
+            <div data-role="collapsible" data-collapsed="true">
+                <h3>Llistes normals</h3>
+                <p>
+                <ul data-role="listview" data-theme="c">
+                    <li data-role="list-divider">Països Escandinaus</li>
+                    <li>Suècia</li>
+                    <li>Noruega</li>
+                    <li>Finlàndia</li>
+                    <li data-role="list-divider">Països Eslaus</li>
+                    <li>Sèrbia</li>
+                    <li>Croàcia</li>
+                    <li>Hongria</li>
+                </ul>
+                </p>
+            </div>
+            <div data-role="collapsible" data-collapsed="true">
+                <h3>Llistes niades</h3>
+                <p>
+                <ul data-role="listview" data-theme="d">
+                    <li>Països Escandinaus
+                        <ul>
+                            <li>Suècia</li>
+                            <li>Noruega</li>
+                            <li>Finlàndia</li>
+                        </ul>
+                    </li>	
+                    <li>Països Eslaus
+                        <ul>
+                            <li >Sèrbia</li>
+                            <li >Croàcia</li>
+                            <li >Hongria</li>
+                        </ul>
+                    </li>   
+                </ul>
+              </p>
+            </div>
+            <div data-role="collapsible" data-collapsed="true">
+                <h3>Llistes amb opcions</h3>
+                <p>
+                    <ul data-role="listview" data-theme="c" data-filter="true" data-filter-placeholder="Busca...">
+                         <li><a href="#">PhoneGap</a><a href="#"></a></li>
+                         <li><a href="#"><img src="img/cordova.png" alt="Apache Cordova"/>jQuery Mobile</a></li>
+                         <li><a href="#"><h2>PhoneGap Builder</h2><p>Servei online</p></a></li>
+                         <li><a href="#">Dreamweaver<span class="ui-li-count">33</span></a></li>
+                         <li><a href="#">Edge Code<p class="ui-li-aside">preview</p></a></li>
+                    </ul>
+                </p>
+            </div>
+        </div>		
+	</div>
+    <div data-role="footer" data-position="fixed" data-id="footer_main">
+		<div data-role="navbar">
+        	<ul>
+                <li><a href="#" data-rel="back" data-icon="back" data-role="button">Back</a></li>
+                <li><a href="#" data-icon="home" data-role="button" rel="external">Home</a></li>
+                <li><a href="#dialegs" data-icon="info" data-rel="dialog" data-role="button">Info</a></li>
+                <li><a href="envioOK.html" data-icon="arrow-r" data-role="button" rel="external">Next</a></li>
+            </ul>
+        </div> 
+	</div>
+</div> <!-- ****  END ID LISTS  **** -->
+
+
+
+
+<div data-role="page" id="forms"  data-theme="b">
+	<div data-role="header">
+		<h1>Formularis</h1>
+        <a href="#" data-role="button" data-icon="back" data-rel="back" data-iconpos="notext"></a>
+	</div>
+	<div data-role="content">	
+        <form action="envioOK.html" method="get">
+            <div data-role="fieldcontain">
+                <label for="textinput">Nom:</label>
+                <input type="text" name="textinput" id="textinput" value=""  />
+            </div>
+            <div data-role="fieldcontain">
+                <label for="passwordinput">Contrasenya:</label>
+                <input type="password" name="passwordinput" id="passwordinput" value=""  />
+            </div>
+            <div data-role="fieldcontain">
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" value=""  />
+            </div>
+            <div data-role="fieldcontain">
+                <label for="slider">Valor:</label>
+                <input type="range" name="slider" id="slider" value="25" min="0" max="100" />
+            </div>
+            <div data-role="fieldcontain">
+                <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+                    <legend>Color</legend>
+                    <input type="checkbox" name="blau" id="blau" value="" />
+                    <label for="blau">Blau</label>
+                    <input type="checkbox" name="vermell" id="vermell" value="" />
+                    <label for="vermell">Vermell</label>
+                    <input type="checkbox" name="verd" id="verd" value="" />
+                    <label for="verd">Verd</label>
+                </fieldset>
+            </div>  
+            <div data-role="fieldcontain">
+                <fieldset data-role="controlgroup">
+                    <legend>Estat Civil</legend>
+                    <input type="radio" name="Estado" id="solter" value="" />
+                    <label for="solter">Solter</label>
+                    <input type="radio" name="Estado" id="casat" value="" />
+                    <label for="casat">Casat</label>
+                </fieldset>
+            </div> 
+            <div data-role="fieldcontain">
+                <label for="flipswitch">Enviament de mails:</label>
+                <select name="flipswitch" id="flipswitch" data-role="slider">
+                    <option value="off">Off</option>
+                    <option value="on">On</option>
+                </select>
+            </div>        
+            <div data-role="fieldcontain">
+                <fieldset data-role="controlgroup">
+                    <label for="selectmenu" class="select">Edat:</label>
+                    <select name="selectmenu1" id="selectmenu1" data-native-menu="false" multiple>
+                        <option value="0" data-placeholder="true">Nens</option>
+                        <option value="1">0-6</option>
+                        <option value="2">7-15</option>
+                    </select>
+                    <select name="selectmenu2" id="selectmenu2" data-native-menu="false">
+                        <option value="0" data-placeholder="true">Joves</option>
+                        <option value="3">16-20</option>
+                        <option value="4">21-35</option>
+                    </select>
+                    <select name="selectmenu3" id="selectmenu3" data-native-menu="false">
+                        <option value="0" data-placeholder="true">Adults</option>
+                        <option value="5">36-45</option>
+                        <option value="6">46-</option>
+                    </select>
+                </fieldset>
+            </div>
+            <a href="envioOK.html" data-role="button" rel="external">Enviar</a>
+        </form>
+	</div> 
+    <div data-role="footer" data-position="fixed" data-id="footer_main">
+		<div data-role="navbar">
+        	<ul>
+                <li><a href="#" data-rel="back" data-icon="back" data-role="button">Back</a></li>
+                <li><a href="#" data-icon="home" data-role="button" rel="external">Home</a></li>
+                <li><a href="#dialegs" data-icon="info" data-rel="dialog" data-role="button">Info</a></li>
+                <li><a href="envioOK.html" data-icon="arrow-r" data-role="button" rel="external">Next</a></li>
+            </ul>
+        </div> 
+	</div>
+</div> <!-- ****  END ID FORMS  **** -->
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+
+@import url(http://fonts.googleapis.com/css?family=Belleza);
+
+* {
+    font-family : "Belleza"; 
+ }
+
+.mg2 {
+    margin: 20px 0;
+ }
+
+.just {
+    text-align: justify;
+ }
+
+.cent {
+    text-align: center;
+ }
+
+img, .logo img {
+    max-width: 100%
+}
+
+hr {
+    border-color: rgba(0,0,0,0.21);
+    border-width: 1px;
+}
+
+.avis {
+    text-align: center; 
+    margin: 0px;
+}
+
+.dialog_test { 
+    text-align: center;
+}
+
+.logo {
+    margin:0 auto 3em; 
+    width: 80%;
+    text-align: center;
+}
+
+.resum {
+    width: 60%; 
+    margin: 0 auto 5em; 
+    text-align: justify;
+}
+
+        
+        
+        
